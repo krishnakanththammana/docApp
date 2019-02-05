@@ -1,7 +1,7 @@
 {
-  "name": "WebVR",
-  "description": "WebVR",
-  "repository": "https://github.com/krishnakanththammana/WebVR",
+  "name": "docApp",
+  "description": "docApp",
+  "repository": "https://github.com/krishnakanththammana/docApp",
   "keywords": ["node", "express", "static"],
   "image": "heroku/nodejs"
 }
