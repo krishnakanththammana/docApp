@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Active Slide - fullPage.js</title>
+    <meta name="author" content="Matthew Howell" />
+    <meta name="description" content="fullPage continuous scrolling demo." />
+    <meta name="keywords" content="fullpage,jquery,demo,scroll,loop,continuous" />
+    <meta name="Resource-type" content="Document" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" type="text/css" href="./dist/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="./examples.css" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div id="fullpage">
+        <div class="section profile-section flex-column" id="section0">
+            <div class="profile-section-column flex-column center-it my-profile">
+                <i class="fa fa-user-circle"></i>
+            </div>
+            <div class="profile-section-column flex-row center-it services-offered">
+                    <div class="services-box flex-column center-it">
+                        <i class="fa fa-stethoscope"></i>
+                    </div>
+                    <div class="services-box flex-column center-it">
+                        <i class="fa fa-heartbeat"></i>
+                    </div>
+                    <div class="services-box flex-column center-it">
+                        <i class="fa fa-wheelchair"></i>
+                    </div>
+                    <div class="services-box flex-column center-it">
+                        <i class="fa fa-user-md"></i>
+                    </div>
+            </div>
+        </div>
+        <div class="section active" id="section1">
+            <div class="slide" id="slide1">
+                <div class="intro full-size flex-column center-it">
+                    <img src="./assistant.jpg" width="100%" style="margin: 0 auto;" alt="">
+                </div>
+            </div>
+            <div class="slide active" id="slide2">
+                <div class="intro flex-row symptoms-list">
+                    <div onclick="selectDoctor()" class="services-box-2 flex-row center-it">
+                        <i class="fa fa-thermometer-half"></i>
+                        <span>Fever</span>
+                    </div>
+                    <div onclick="selectDoctor()" class="services-box-2 flex-row center-it">
+                        <i class="fa fa-user-times"></i>
+                        <span>Cough</span>
+                    </div>
+                    <div onclick="selectDoctor()" class="services-box-2 flex-row center-it">
+                        <i class="fa fa-male"></i>
+                        <span>Body Pains</span>
+                    </div>
+                    <div onclick="selectDoctor()" class="services-box-2 flex-row center-it">
+                        <i class="fa fa-user-secret"></i>
+                        <span>Head Ache</span>
+                    </div>
+                    <div onclick="selectDoctor()" class="services-box-2 flex-row center-it">
+                        <i class="fa fa-ambulance"></i>
+                        <span>Emergency</span>
+                    </div>
+                    <div onclick="selectDoctor()" class="services-box-2 flex-row center-it">
+                        <i class="fa fa-user-md"></i>
+                        <span>Checkup</span>
+                    </div>
+                    <div onclick="selectDoctor()" class="services-box-2 flex-row center-it">
+                        <i class="fa fa-child"></i>
+                        <span>Pediatrican</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide full-size" id="slide3">
+                <img src="./body.png" alt="" onclick="selectDoctor()">
+            </div>
+
+        </div>
+        <div class="section" id="section2">
+            <div class="intro full-size">
+                <h2>List Of Doctors</h2>
+                <div class="services-box-3 flex-row center-it">
+                    <i class="fa fa-user-md"></i>
+                    <span>Dr. John Connor</span>
+                </div>
+                <div class="services-box-3 flex-row center-it">
+                    <i class="fa fa-user-md"></i>
+                    <span>Dr. John Connor</span>
+                </div>
+                <div class="services-box-3 flex-row center-it">
+                    <i class="fa fa-user-md"></i>
+                    <span>Dr. John Connor</span>
+                </div>
+                <div class="services-box-3 flex-row center-it">
+                    <i class="fa fa-user-md"></i>
+                    <span>Dr. John Connor</span>
+                </div>
+                <div class="services-box-3 flex-row center-it">
+                    <i class="fa fa-user-md"></i>
+                    <span>Dr. John Connor</span>
+                </div>
+                <div class="services-box-3 flex-row center-it">
+                    <i class="fa fa-user-md"></i>
+                    <span>Dr. John Connor</span>
+                </div>
+                <div class="services-box-3 flex-row center-it">
+                    <i class="fa fa-user-md"></i>
+                    <span>Dr. John Connor</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./dist/fullpage.js"></script>
+    <script type="text/javascript">
+        var myFullpage = new fullpage('#fullpage', {
+            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+            menu: '#menu',
+            lazyLoad: true
+        });
+        function selectDoctor() {
+            fullpage_api.moveSectionDown();
+        }
+    </script>
+
+</body>
+
+</html>
